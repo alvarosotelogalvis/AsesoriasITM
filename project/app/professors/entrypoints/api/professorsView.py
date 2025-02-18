@@ -114,7 +114,7 @@ class DeleteprofessorView(Resource):
             return APIResponseService.success(
                 output=output,
                 status_code=HTTPStatus.OK,
-                message="Delete"
+                message="DELETE"
             )
         except Exception as error:
             return APIResponseService.error(
