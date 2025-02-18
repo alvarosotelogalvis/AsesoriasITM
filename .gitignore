@@ -1,0 +1,68 @@
+# Virtual environment directories
+venv/
+.env
+env/
+ENV/
+.venv/
+.venv/
+
+# Configuration files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pdb
+
+# Database files
+*.db
+
+# Development and debug logs
+debug.log
+*.log
+
+# IDE configurations
+.idea/
+.vscode/
+*.swp
+
+# Flask specific files
+instance/
+*.sqlite3
+
+# Distribution and packaging files
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+*.tar.gz
+*.whl
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Cache and packed files
+*.manifest
+*.spec
+.cache
+*.log
+*.zip
+*.tar.gz
+*.sqlite
+.coverage
+
+# Build directories
+build/
+docs/_build/
+
+# OS generated files
+.DS_Store
+*.bak
+*.swp
+._*
+Thumbs.db
+docker-compose.yml
+
+#Storage
+storage/
