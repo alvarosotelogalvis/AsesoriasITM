@@ -3,6 +3,7 @@ from project.app.professors.domain.models.professorsModel import (
 )
 from project.shared.config.database import SessionFactory
 
+from sqlalchemy import update
 from sqlalchemy.orm.exc import FlushError
 from injector import inject
 
@@ -63,6 +64,24 @@ class professorAdapter:
                 faculty_location=kwargs.get("faculty_location"),
             )
             self.session.add(professor)
+            return professor
+        except FlushError as error:
+            raise Exception(error)
+        except Exception as error:
+            raise Exception(error)
+        finally:
+            self.session.commit()
+            self.session.close()
+
+    def update_professor(self, identification_card: int, **kwargs):
+        try:
+            professor = update(
+                professorModel
+            ).where(
+                professorModel.identification_card == identification_card
+            ).values(**kwargs)
+            self.session.execute(professor)
+            self.session.commit()
             return professor
         except FlushError as error:
             raise Exception(error)
