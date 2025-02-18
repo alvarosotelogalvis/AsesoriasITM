@@ -1,11 +1,11 @@
-from project.app.professors.domain.services.container import container as profesors_container
+from project.app.professors.domain.services.container import container as professors_container
 from project.app.users.domain.services.container import container as user_container
 from project.app.schedules.domain.services.container import container as schedule_container
 
 import inspect
 
 container = {
-    **profesors_container,
+    **professors_container,
     **user_container,
     **schedule_container
 }

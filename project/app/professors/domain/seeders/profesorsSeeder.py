@@ -1,14 +1,14 @@
 from project.app.professors.domain.models.professorsModel import (
-    ProfesorModel
+    professorModel
 )
 from project.shared.domain.utils.updateOrCreate import (
     update_or_create
 )
 from project.shared.domain.ports.seederPort import SeederPort
 
-class ProfesorSeeder(SeederPort):
+class professorSeeder(SeederPort):
 
-    profesors = [
+    professors = [
         {
             "fullname": "ARIAS LONDOÑO ALEXANDER",
             "identification_card": 98648261,
@@ -245,7 +245,7 @@ class ProfesorSeeder(SeederPort):
             "institutional_email": "victorgomez@itm.edu.co",
             "personal_email": "victorgomez@itm.edu.co",
             "email_with_domain": "victorgomez3007@correo.itm.edu.co",
-            "faculty_location": "Sala de profesores de cátedra Fraternidad Lunes, martes y miércoles. G C103 Robledo Jueves y viernes."
+            "faculty_location": "Sala de professores de cátedra Fraternidad Lunes, martes y miércoles. G C103 Robledo Jueves y viernes."
         },
         {
             "fullname": "GONZALEZ VALENCIA ESTEBAN",
@@ -531,17 +531,17 @@ class ProfesorSeeder(SeederPort):
 
     def handle(self):
         try:
-            for profesor in self.profesors:
+            for professor in self.professors:
                 update_or_create(
                     session=self.session,
-                    model=ProfesorModel,
+                    model=professorModel,
                     keys={
-                        "identification_card": profesor.get("identification_card")
+                        "identification_card": professor.get("identification_card")
                     },
-                    data=profesor
+                    data=professor
                 )
         except Exception as error:
             self.session.rollback()
-            print(f"Error in the Seeder ProfesorSeeder: {error}")
+            print(f"Error in the Seeder professorSeeder: {error}")
         finally:
             self.session.close()

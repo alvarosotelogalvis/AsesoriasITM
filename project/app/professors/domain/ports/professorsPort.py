@@ -1,10 +1,13 @@
-class ProfesorPort:
+class professorPort:
 
-    def get_profesor(self, **kwargs):
+    def get_professor(self, **kwargs):
         raise NotImplementedError
 
-    def get_profesor_by_identification_card(
+    def get_professor_by_identification_card(
         self,
         identification_card: int
     ):
+        raise NotImplementedError
+
+    def create_professor(self, **kwargs):
         raise NotImplementedError

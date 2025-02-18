@@ -2,7 +2,7 @@ from project.app.schedules.domain.models.schedulesModel import (
     ScheduleModel
 )
 from project.app.professors.domain.models.professorsModel import (
-    ProfesorModel
+    professorModel
 )
 from project.shared.config.database import SessionFactory
 
@@ -19,14 +19,14 @@ class ScheduleAdapter:
     def get_all_schedules(self):
         try:
             query = self.session.query(
-                ProfesorModel.fullname,
-                ProfesorModel.institutional_email,
+                professorModel.fullname,
+                professorModel.institutional_email,
                 ScheduleModel.group_id,
                 ScheduleModel.subject,
                 ScheduleModel.schedule,
                 ScheduleModel.classroom,
             ).join(
-                ProfesorModel
+                professorModel
             )
             # schedules = self.session.execute(query).mappings().all()
             return query

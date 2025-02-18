@@ -13,7 +13,7 @@ class ScheduleModel(Base):
     schedule = Column(String(150), nullable=False)
     classroom = Column(String(150), nullable=False)
     academic_program = Column(String(40), nullable=False)
-    profesor_id = Column(Integer, ForeignKey("profesors.id"), nullable=False)
+    professor_id = Column(Integer, ForeignKey("professors.id"), nullable=True)
     created_at = Column("created_at", TIMESTAMP, nullable=True, default=datetime.now(timezone.utc))
     updated_at = Column(
         "updated_at",
@@ -22,3 +22,4 @@ class ScheduleModel(Base):
         default=datetime.now(timezone.utc),
         onupdate=datetime.now(timezone.utc)
     )
+    deleted_at = Column("deleted_at", TIMESTAMP, nullable=True)

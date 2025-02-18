@@ -1,5 +1,5 @@
 from project.app.professors.domain.ports.professorsPort import (
-    ProfesorPort
+    professorPort
 )
 from project.app.schedules.domain.models.schedulesModel import (
     ScheduleModel
@@ -1092,19 +1092,14 @@ class ScheduleSeeder(SeederPort):
 
     def handle(self):
         try:
-            profesor_not_found = []
-            profesor_port = get_instance(ProfesorPort)
+            professor_port = get_instance(professorPort)
             for schedule in self.schedules:
-                get_profesor = profesor_port.get_profesor_by_identification_card(
+                get_professor = professor_port.get_professor_by_identification_card(
                     identification_card=schedule.get("identification_card")
                 )
-                if not get_profesor:
-                    if  schedule.get("identification_card") not in profesor_not_found:
-                        profesor_not_found.append(schedule.get("identification_card"))
-                    continue
                 schedule.pop("instructor")
                 schedule.pop("identification_card")
-                schedule.update({"profesor_id": get_profesor.id})
+                schedule.update({"professor_id": get_professor.id if get_professor else None})
                 update_or_create(
                     session=self.session,
                     model=ScheduleModel,
@@ -1113,9 +1108,8 @@ class ScheduleSeeder(SeederPort):
                     },
                     data=schedule
                 )
-            print(profesor_not_found)
         except Exception as error:
             self.session.rollback()
-            print(f"Error in the Seeder ProfesorSeeder: {error}")
+            print(f"Error in the Seeder professorSeeder: {error}")
         finally:
             self.session.close()

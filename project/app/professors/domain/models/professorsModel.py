@@ -4,8 +4,8 @@ from datetime import datetime, timezone
 from sqlalchemy import Column, String, Integer, TIMESTAMP
 
 
-class ProfesorModel(Base):
-    __tablename__ = "profesors"
+class professorModel(Base):
+    __tablename__ = "professors"
 
     id = Column(Integer, primary_key=True, index=True)
     fullname = Column(String(100), nullable=False)
@@ -28,3 +28,4 @@ class ProfesorModel(Base):
         default=datetime.now(timezone.utc),
         onupdate=datetime.now(timezone.utc)
     )
+    deleted_at = Column("deleted_at", TIMESTAMP, nullable=True)

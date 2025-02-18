@@ -26,7 +26,7 @@ class SignInService:
             user = SignInSerializer().dump(user)
             access_token = create_access_token(identity=user, fresh=True)
             refresh_token = create_refresh_token(identity=user)
-            user.pop("profesor_id")
+            user.pop("professor_id")
             return {
                 'auth': {
                     'access_token': access_token,

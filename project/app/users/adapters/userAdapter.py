@@ -29,7 +29,7 @@ class UserAdapter:
         try:
             user = UserModel(
                 username=kwargs.get("institutional_email"),
-                profesor_id=kwargs.get("profesor_id")
+                professor_id=kwargs.get("professor_id")
             )
             user.set_password(kwargs.get("password"))
             self.session.add(user)

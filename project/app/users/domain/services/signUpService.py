@@ -1,5 +1,5 @@
 from project.app.professors.domain.ports.professorsPort import (
-    ProfesorPort
+    professorPort
 )
 from project.app.users.domain.ports.userPort import UserPort
 
@@ -7,10 +7,10 @@ class SignUpService:
 
     def __init__(
         self,
-        profesor_port: ProfesorPort,
+        professor_port: professorPort,
         user_port: UserPort
     ):
-        self.profesor_port = profesor_port
+        self.professor_port = professor_port
         self.user_port = user_port
 
     def execute(
@@ -20,7 +20,7 @@ class SignUpService:
         password: str
     ):
         # Validations
-        profesor = self.__validate_profesor(
+        professor = self.__validate_professor(
             institutional_email=institutional_email,
             identification_card=identification_card
         )
@@ -32,7 +32,7 @@ class SignUpService:
         create_user = self.user_port.create_user(
             **{
                 "institutional_email": institutional_email,
-                "profesor_id": profesor.id,
+                "professor_id": professor.id,
                 "password": password
             }
         )
@@ -40,20 +40,20 @@ class SignUpService:
             raise Exception("Logged-in user could not be created")
         return {"successful": "User successfully logged in"}
 
-    def __validate_profesor(
+    def __validate_professor(
         self,
         institutional_email: str,
         identification_card: int
     ):
-        get_profesor = self.profesor_port.get_profesor(
+        get_professor = self.professor_port.get_professor(
             **{
                 "institutional_email": institutional_email,
                 "identification_card": identification_card
             }
         )
-        if not get_profesor:
+        if not get_professor:
             raise Exception("The email or ID number is incorrect.")
-        return get_profesor
+        return get_professor
 
     def __validate_logged_in_users(
         self,

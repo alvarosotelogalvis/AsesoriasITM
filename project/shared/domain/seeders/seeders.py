@@ -19,7 +19,7 @@ log = logging.getLogger('application.commands')
 @with_appcontext
 def run_seeders(class_name):
     seeders = [
-        ProfesorSeeder,
+        professorSeeder,
         ScheduleSeeder
     ]
     try:

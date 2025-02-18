@@ -10,7 +10,7 @@ class UserModel(Base):
     id = Column(Integer, primary_key=True, index=True)
     username = Column(String(80), unique=True, nullable=False)
     hash_password = Column(Text, nullable=False)
-    profesor_id = Column(Integer, ForeignKey("profesors.id"), nullable=False)
+    professor_id = Column(Integer, ForeignKey("professors.id"), nullable=False)
     created_at = Column("created_at", TIMESTAMP, nullable=True, default=datetime.now(timezone.utc))
     updated_at = Column(
         "updated_at",
@@ -19,6 +19,7 @@ class UserModel(Base):
         default=datetime.now(timezone.utc),
         onupdate=datetime.now(timezone.utc)
     )
+    deleted_at = Column("deleted_at", TIMESTAMP, nullable=True)
 
     def set_password(self, password):
         self.hash_password = generate_password_hash(password)
