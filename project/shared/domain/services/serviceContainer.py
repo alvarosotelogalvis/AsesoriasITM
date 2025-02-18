@@ -1,4 +1,4 @@
-from project.app.profesors.domain.services.container import container as profesors_container
+from project.app.professors.domain.services.container import container as profesors_container
 from project.app.users.domain.services.container import container as user_container
 from project.app.schedules.domain.services.container import container as schedule_container
 

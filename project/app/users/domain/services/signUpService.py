@@ -1,4 +1,4 @@
-from project.app.profesors.domain.ports.profesorsPort import (
+from project.app.professors.domain.ports.professorsPort import (
     ProfesorPort
 )
 from project.app.users.domain.ports.userPort import UserPort

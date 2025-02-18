@@ -1,4 +1,4 @@
-from project.app.profesors.domain.models.profesors import (
+from project.app.professors.domain.models.professorsModel import (
     ProfesorModel
 )
 from project.shared.config.database import SessionFactory

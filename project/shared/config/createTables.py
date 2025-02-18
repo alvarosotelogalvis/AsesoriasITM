@@ -1,6 +1,6 @@
 def get_tables():
-    # Profesors
-    from project.app.profesors.domain.models.profesors import ProfesorModel
+    # Professors
+    from project.app.professors.domain.models.professorsModel import ProfesorModel
 
     # Users
     from project.app.users.domain.models.userModel import UserModel
