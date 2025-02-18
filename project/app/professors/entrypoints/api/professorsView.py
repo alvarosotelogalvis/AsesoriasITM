@@ -4,6 +4,9 @@ from project.app.professors.entrypoints.requests.createProfesorInput import (
 from project.app.professors.domain.services.createProfesorService import (
     CreateprofessorService
 )
+from project.shared.domain.services.apiResponseService import (
+    APIResponseService
+)
 from project.shared.domain.services.serviceContainer import (
     get_instance
 )
@@ -36,5 +39,13 @@ class CreateprofessorView(Resource):
         with_types=[ValidationRequestType.BODY_PARAMS]
     )
     def post(self, request):
-        service = get_instance(CreateprofessorService)
-        output = service.execute(**request)
+        try:
+            service = get_instance(CreateprofessorService)
+            output = service.execute(**request)
+            return APIResponseService.success(
+                output=output
+            )
+        except Exception as error:
+            return APIResponseService.error(
+                message=str(error)
+            )

@@ -18,3 +18,7 @@ if api is not None:
     # Schedules
     from project.app.schedules.entrypoints.api.schedulesView import api as ns_schedules
     api.add_namespace(ns_schedules)
+
+    # Professors
+    from project.app.professors.entrypoints.api.professorsView import api as ns_professors
+    api.add_namespace(ns_professors)
