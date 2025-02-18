@@ -14,3 +14,6 @@ class professorPort:
 
     def update_professor(self, identification_card: int, **kwargs):
         raise NotImplementedError
+
+    def delete_professor(self, identification_card: int):
+        raise NotImplementedError
