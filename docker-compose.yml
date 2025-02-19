@@ -21,7 +21,7 @@ services:
     ports:
       - 5000:5000
     volumes:
-      - ../consulting_schedule:/app
+      - .:/app
     depends_on:
       - database
     env_file:
