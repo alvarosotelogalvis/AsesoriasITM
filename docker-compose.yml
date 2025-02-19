@@ -1,0 +1,35 @@
+name: gestion_consulting_schedule
+services:
+  database:
+    image: mysql:8.0.39-debian
+    container_name: 'database'
+    platform: linux/x86_64
+    ports:
+      - 3306:3306
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=consulting_schedule_db
+    volumes:
+      - ../data:/var/lib/mysql
+    networks:
+      - simplifica
+  backend:
+    restart: always
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: 'backend'
+    platform: linux/x86_64
+    ports:
+      - 5000:5000
+    volumes:
+      - ../consulting_schedule:/app
+    depends_on:
+      - database
+    env_file:
+      - .env
+    networks:
+      - simplifica
+networks:
+  simplifica:
+    external: true

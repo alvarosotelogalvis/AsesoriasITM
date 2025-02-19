@@ -62,7 +62,6 @@ docs/_build/
 *.swp
 ._*
 Thumbs.db
-docker-compose.yml
 
 #Storage
 storage/

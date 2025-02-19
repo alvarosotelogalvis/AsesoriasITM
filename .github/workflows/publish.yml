@@ -1,0 +1,40 @@
+name: Consulting Schedules
+
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Docker Compose
+        run: |
+          docker-compose --version
+
+    - name: Deploy with Docker Compose
+        run: |
+          docker-compose build --no-cache
+          docker-compose up -d
+
+    - name: Verify services
+        run: |
+          docker-compose ps
+
+    - name: Wait for services to be ready
+        run: |
+          sleep 10  # Ajusta este tiempo según sea necesario
+    
+    - name: Run Alembic migrations
+        run: |
+          docker-compose exec backend alembic upgrade head
+
+    - name: Run Seeders
+        run: |
+          flask dbseed
