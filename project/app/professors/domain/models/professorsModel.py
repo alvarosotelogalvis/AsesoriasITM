@@ -20,6 +20,7 @@ class professorModel(Base):
     personal_email = Column(String(100), unique=True, nullable=False)
     email_with_domain = Column(String(100), unique=True, nullable=False)
     faculty_location = Column(String(150), nullable=True)
+    role = Column(String(15), nullable=False)
     created_at = Column("created_at", TIMESTAMP, nullable=True, default=datetime.now(timezone.utc))
     updated_at = Column(
         "updated_at",

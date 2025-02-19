@@ -13,3 +13,4 @@ class UpdateprofessorSchema(Schema):
     personal_email = fields.String(required=False)
     email_with_domain = fields.String(required=False)
     faculty_location = fields.String(required=False)
+    role = fields.String(required=False)

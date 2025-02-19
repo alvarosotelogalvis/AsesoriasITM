@@ -21,7 +21,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "alexanderarias@itm.edu.co",
             "personal_email": "profeitm@gmail.com",
             "email_with_domain": "alexanderarias8261@correo.itm.edu.co",
-            "faculty_location": "Bloque L- 304 (Sede Fraternidad)"
+            "faculty_location": "Bloque L- 304 (Sede Fraternidad)",
+            "role": "professor"
         },
         {
             "fullname": "CASTRILLON JIMENEZ ELKIN ALBERTO",
@@ -35,7 +36,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "elkincastrillon@itm.edu.co",
             "personal_email": "elkincastrillon5884@correo.itm.edu.co",
             "email_with_domain": "elkincastrillon5884@correo.itm.edu.co",
-            "faculty_location": "Bloque N-405 (Sede Fraternidad)"
+            "faculty_location": "Bloque N-405 (Sede Fraternidad)",
+            "role": "professor"
         },
         {
             "fullname": "CASTRO OSPINA ANDRÉS EDUARDO",
@@ -49,7 +51,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "andrescastro@itm.edu.co",
             "personal_email": "",
             "email_with_domain": "andrescastro2705@correo.itm.edu.co",
-            "faculty_location": "Laboratorio de Máquinas Inteligentes y Reconocimiento de Patrones - Parque-I"
+            "faculty_location": "Laboratorio de Máquinas Inteligentes y Reconocimiento de Patrones - Parque-I",
+            "role": "professor"
         },
         {
             "fullname": "LOPEZ GIRALDO FRANCISCO EUGENIO",
@@ -63,7 +66,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "franciscolopez@itm.edu.co",
             "personal_email": "flopezgi1@gmail.com",
             "email_with_domain": "franciscolopez9978@correo.itm.edu.co",
-            "faculty_location": "M-212 - laboratorio de Física M-103 - laboratorio de óptica, fotónica y visión artificial M9811"
+            "faculty_location": "M-212 - laboratorio de Física M-103 - laboratorio de óptica, fotónica y visión artificial M9811",
+            "role": "professor"
         },
         {
             "fullname": "MARTINEZ CIRO ROGER ALEXANDER",
@@ -77,7 +81,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "rogermartinez@itm.edu.co",
             "personal_email": "alexanders-rogers@hotmail.com",
             "email_with_domain": "rogermartinez0199@correo.itm.edu.co",
-            "faculty_location": "Bloque M-212 (Sede Fraternidad)"
+            "faculty_location": "Bloque M-212 (Sede Fraternidad)",
+            "role": "professor"
         },
         {
             "fullname": "MONCADA ACEVEDO MARIA ELENA",
@@ -91,7 +96,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "mariamoncada@itm.edu.co",
             "personal_email": "mariaema1@gmail.com",
             "email_with_domain": "mariamoncada9910@correo.itm.edu.co",
-            "faculty_location": "Parque I, Laboratorio de Energía Eléctrica y Potencia"
+            "faculty_location": "Parque I, Laboratorio de Energía Eléctrica y Potencia",
+            "role": "professor"
         },
         {
             "fullname": "MORANTES GUZMAN LUIS JAVIER",
@@ -105,7 +111,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "luismorantes@itm.edu.co",
             "personal_email": "luismorantes@itm.edu.co",
             "email_with_domain": "luismorantes2193@correo.itm.edu.co",
-            "faculty_location": "Parque I - Lab de Sistemas de Control y Robótica"
+            "faculty_location": "Parque I - Lab de Sistemas de Control y Robótica",
+            "role": "professor"
         },
         {
             "fullname": "ORTIZ VALENCIA PAULA ANDREA",
@@ -119,7 +126,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "paulaortiz@itm.edu.co",
             "personal_email": "portizv@gmail.com",
             "email_with_domain": "paulaortiz3885@correo.itm.edu.co",
-            "faculty_location": "Bloque M sótano 1 ( pero yo estoy en teletrabajo)"
+            "faculty_location": "Bloque M sótano 1 ( pero yo estoy en teletrabajo)",
+            "role": "professor"
         },
         {
             "fullname": "SERNA GARCES SERGIO IGNACIO",
@@ -133,7 +141,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "sergioserna@itm.edu.co",
             "personal_email": "ignacio.serna@udea.edu.co",
             "email_with_domain": "sergioserna3427@correo.itm.edu.co",
-            "faculty_location": "Oficina ASODITEM 117-F (Bloque L, piso 2), Laboratorio de Electrónica y Energías Renovables (Parque I), Casa."
+            "faculty_location": "Oficina ASODITEM 117-F (Bloque L, piso 2), Laboratorio de Electrónica y Energías Renovables (Parque I), Casa.",
+            "role": "professor"
         },
         {
             "fullname": "YEPES ZULUAGA SARA MARIA",
@@ -147,7 +156,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "sarayepes@itm.edu.co",
             "personal_email": "sarayepes@itm.edu.co",
             "email_with_domain": "sarayepes5096@correo.itm.edu.co",
-            "faculty_location": "Bloque L- 304 (Sede Fraternidad)"
+            "faculty_location": "Bloque L- 304 (Sede Fraternidad)",
+            "role": "professor"
         },
         {
             "fullname": "ALVAREZ SALAZAR JOHNY ANTONIO",
@@ -161,7 +171,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "johnyalvarez@itm.edu.co",
             "personal_email": "johnyalvarez@itm.edu.co",
             "email_with_domain": "johnyalvarez6389@correo.itm.edu.co",
-            "faculty_location": "Bloque M sótano 1"
+            "faculty_location": "Bloque M sótano 1",
+            "role": "professor"
         },
         {
             "fullname": "BETANCUR PEREZ ANDRÉS FELIPE",
@@ -175,7 +186,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "andresbetancur@itm.edu.co",
             "personal_email": "andresfbp@gmail.com",
             "email_with_domain": "andresbetancur2799@correo.itm.edu.co",
-            "faculty_location": "Bloque M-212 (Sede Fraternidad)"
+            "faculty_location": "Bloque M-212 (Sede Fraternidad)",
+            "role": "professor"
         },
         {
             "fullname": "CARMONA CASTRO MAURICIO ALONSO",
@@ -189,7 +201,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "mauriciocarmonac@itm.edu.co",
             "personal_email": "mauriciocarmonac@itm.edu.co",
             "email_with_domain": "mauriciocarmona5221@correo.itm.edu.co",
-            "faculty_location": "Bloque M sótano 1"
+            "faculty_location": "Bloque M sótano 1",
+            "role": "professor"
         },
         {
             "fullname": "CASTRILLON FORERO JAVIER ERNESTO",
@@ -203,7 +216,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "javiercastrillon@itm.edu.co",
             "personal_email": "javiercastrillon@itm.edu.co",
             "email_with_domain": "javiercastrillon2916@correo.itm.edu.co",
-            "faculty_location": ""
+            "faculty_location": "",
+            "role": "professor"
         },
         {
             "fullname": "GARCÍA PINEDA VANESSA",
@@ -217,7 +231,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "vanessagarciap@itm.edu.co",
             "personal_email": "vanessagarcia8967@correo.itm.edu.co",
             "email_with_domain": "vanessagarcia8967@correo.itm.edu.co",
-            "faculty_location": "Bloque M-212 (Sede Fraternidad)"
+            "faculty_location": "Bloque M-212 (Sede Fraternidad)",
+            "role": "professor"
         },
         {
             "fullname": "GOEZ MORA MANUEL MAURICIO",
@@ -231,7 +246,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "manuelgoez@itm.edu.co",
             "personal_email": "mmgoezm@gmail.com",
             "email_with_domain": "manuelgoez3599@correo.itm.edu.co",
-            "faculty_location": "Bloque M-212 (Sede Fraternidad)"
+            "faculty_location": "Bloque M-212 (Sede Fraternidad)",
+            "role": "professor"
         },
         {
             "fullname": "GOMEZ YEPES VICTOR HUGO",
@@ -245,7 +261,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "victorgomez@itm.edu.co",
             "personal_email": "victorgomez@itm.edu.co",
             "email_with_domain": "victorgomez3007@correo.itm.edu.co",
-            "faculty_location": "Sala de professores de cátedra Fraternidad Lunes, martes y miércoles. G C103 Robledo Jueves y viernes."
+            "faculty_location": "Sala de professores de cátedra Fraternidad Lunes, martes y miércoles. G C103 Robledo Jueves y viernes.",
+            "role": "professor"
         },
         {
             "fullname": "GONZALEZ VALENCIA ESTEBAN",
@@ -259,7 +276,8 @@ class professorSeeder(SeederPort):
             "institutional_email": "estebangonzalez@itm.edu.co",
             "personal_email": "egonzalv@gmail.com",
             "email_with_domain": "estebangonzalez4302@correo.itm.edu.co",
-            "faculty_location": "Bloque M-212 (Sede Fraternidad)"
+            "faculty_location": "Bloque M-212 (Sede Fraternidad)",
+            "role": "professor"
         },
         {
             "fullname": "GRAJALES BUSTAMANTE JUAN DAVID",
@@ -273,260 +291,279 @@ class professorSeeder(SeederPort):
             "institutional_email": "juangrajales@itm.edu.co",
             "personal_email": "juangrajales5806@correo.itm.edu.co",
             "email_with_domain": "juangrajales5806@correo.itm.edu.co",
-            "faculty_location": "Bloque M sótano 1"
+            "faculty_location": "Bloque M sótano 1",
+            "role": "admin"
         },
         {
-        "fullname": "GUARNIZO LEMUS CRISTIAN",
-        "identification_card": 10034133,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA ELECTRÓNICA",
-        "highest_education_level": "Doctorado",
-        "degree_obtained": "Doctor en Ingeniería",
-        "undergraduate_degree": "Ingeniero Electrónico",
-        "partnership": "OCASIONAL",
-        "institutional_email": "cristianguarnizo@itm.edu.co",
-        "personal_email": "cdguarnizo@hotmail.com",
-        "email_with_domain": "cristianguarnizo4133@correo.itm.edu.co",
-        "faculty_location": "Parque I - Laboratorio de Sistemas de Control y Robótica"
-    },
-    {
-        "fullname": "MARQUEZ VILORIA DAVID ANDRES",
-        "identification_card": 16079570,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA EN TELECOMUNICACIONES",
-        "highest_education_level": "Maestría",
-        "degree_obtained": "Magíster en Ingeniería Eléctrica",
-        "undergraduate_degree": "Ingeniero Electrónico",
-        "partnership": "OCASIONAL",
-        "institutional_email": "davidmarquez@itm.edu.co",
-        "personal_email": "davidmarquez@itm.edu.co",
-        "email_with_domain": "davidmarquez9570@correo.itm.edu.co",
-        "faculty_location": "Laboratorio de sistemas de control y robótica, Parque-I"
-    },
-    {
-        "fullname": "MEJÍA ARANGO JUAN GUILLERMO",
-        "identification_card": 98514998,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA ELECTRÓNICA",
-        "highest_education_level": "Doctorado",
-        "degree_obtained": "Doctorado en Ciencias de la Educación",
-        "undergraduate_degree": "Ingeniero Electricista",
-        "partnership": "OCASIONAL",
-        "institutional_email": "juanmejia@itm.edu.co",
-        "personal_email": "juanmejiaar@gmail.com",
-        "email_with_domain": "juanmejia4998@correo.itm.edu.co",
-        "faculty_location": "Bloque L- 304 (Sede Fraternidad)"
-    },
-    {
-        "fullname": "MONTES GRANADA WILLER FERNEY",
-        "identification_card": 15336658,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA EN TELECOMUNICACIONES",
-        "highest_education_level": "Maestría",
-        "degree_obtained": "Maestría en Electrónica",
-        "undergraduate_degree": "Ingeniero Electrónico",
-        "partnership": "OCASIONAL",
-        "institutional_email": "willermontes@itm.edu.co",
-        "personal_email": "wfmontes@gmail.com",
-        "email_with_domain": "willermontes6658@correo.itm.edu.co",
-        "faculty_location": "Bloque M sótano 1"
-    },
-    {
-        "fullname": "MONTOYA BENITEZ ALBER OSWALDO",
-        "identification_card": 98606628,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA EN TELECOMUNICACIONES",
-        "highest_education_level": "Maestría",
-        "degree_obtained": "Magíster en Ingeniería de Telecomunicaciones",
-        "undergraduate_degree": "Ingeniería de Control",
-        "partnership": "OCASIONAL",
-        "institutional_email": "albermontoya@itm.edu.co",
-        "personal_email": "albertmontoya912@gmail.com",
-        "email_with_domain": "albermontoya6628@correo.itm.edu.co",
-        "faculty_location": "Bloque M-212 (Sede Fraternidad)"
-    },
-    {
-        "fullname": "NIETO MORA DANIEL ALEXIS",
-        "identification_card": 1017222725,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA ELECTRÓNICA",
-        "highest_education_level": "Maestría",
-        "degree_obtained": "Magister en Automatización y Control Industrial",
-        "undergraduate_degree": "Ingeniería Mecatrónica",
-        "partnership": "OCASIONAL",
-        "institutional_email": "danielnieto@itm.edu.co",
-        "personal_email": "alexis.0894@hotmail.com",
-        "email_with_domain": "danielnieto2725@correo.itm.edu.co",
-        "faculty_location": "Laboratorio de Máquinas Inteligentes y Reconocimiento de Patrones MIRP - Parque I"
-    },
-    {
-        "fullname": "OSPINA CIFUENTES BAYRON JESIT",
-        "identification_card": 98505501,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA EN TELECOMUNICACIONES",
-        "highest_education_level": "Maestría",
-        "degree_obtained": "Magíster en Ingeniería de Telecomunicaciones",
-        "undergraduate_degree": "Ingeniero de Sistemas",
-        "partnership": "OCASIONAL",
-        "institutional_email": "bayronospina@itm.edu.co",
-        "personal_email": "bayronospina@itm.edu.co",
-        "email_with_domain": "bayronospina5501@correo.itm.edu.co",
-        "faculty_location": "Bloque M-212 (Sede Fraternidad)"
-    },
-    {
-        "fullname": "OSSA MOLINA OSCAR DAVID",
-        "identification_card": 1152195365,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA EN TELECOMUNICACIONES",
-        "highest_education_level": "Maestría",
-        "degree_obtained": "Maestría en Automatización y Control Industrial",
-        "undergraduate_degree": "Ingeniero de Telecomunicaciones",
-        "partnership": "OCASIONAL",
-        "institutional_email": "oscarossa@itm.edu.co",
-        "personal_email": "oscarossa5365@correo.itm.edu.co",
-        "email_with_domain": "oscarossa5365@correo.itm.edu.co",
-        "faculty_location": "Bloque M-212 (Sede Fraternidad)"
-    },
-    {
-        "fullname": "RESTREPO CUESTAS BONIE JOHANA",
-        "identification_card": 24694065,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA ELECTRÓNICA",
-        "highest_education_level": "Doctorado",
-        "degree_obtained": "Doctora en Ingeniería Automática",
-        "undergraduate_degree": "Ingeniero Electrónico",
-        "partnership": "OCASIONAL",
-        "institutional_email": "bonierestrepo@itm.edu.co",
-        "personal_email": "bonierestrepo@itm.edu.co",
-        "email_with_domain": "bonierestrepo4065@correo.itm.edu.co",
-        "faculty_location": "Laboratorio de Simulación, Modelamiento y Prototipado ubicado en Parque I"
-    },
-    {
-        "fullname": "REYES VERA ERICK ESTEFEN",
-        "identification_card": 1017125415,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA EN TELECOMUNICACIONES",
-        "highest_education_level": "Doctorado",
-        "degree_obtained": "Doctor en Ingeniería",
-        "undergraduate_degree": "Ingeniero Físico",
-        "partnership": "OCASIONAL",
-        "institutional_email": "erickreyes@itm.edu.co",
-        "personal_email": "erickreyes@itm.edu.co",
-        "email_with_domain": "erickreyes5415@correo.itm.edu.co",
-        "faculty_location": "Bloque M-212 (Sede Fraternidad)"
-    },
-    {
-        "fullname": "ROJAS MONTANO JHON JAIRO",
-        "identification_card": 1116917420,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "TECNOLOGÍA EN AUTOMATIZACIÓN ELECTRÓNICA",
-        "highest_education_level": "Maestría",
-        "degree_obtained": "Maestría en Automatización y Control Industrial",
-        "undergraduate_degree": "Ingeniero Electrónico",
-        "partnership": "OCASIONAL",
-        "institutional_email": "jhonrojas@itm.edu.co",
-        "personal_email": "jhonrojas@itm.edu.co",
-        "email_with_domain": "jhonrojas7420@correo.itm.edu.co",
-        "faculty_location": ""
-    },
-    {
-        "fullname": "ROLDAN VASCO SEBASTIAN",
-        "identification_card": 1037570818,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA ELECTRÓNICA",
-        "highest_education_level": "Doctorado",
-        "degree_obtained": "Doctor en Ingeniería Electrónica y de Computación",
-        "undergraduate_degree": "Bioingeniería",
-        "partnership": "OCASIONAL",
-        "institutional_email": "sebastianroldan@itm.edu.co",
-        "personal_email": "sebastianroldan@itm.edu.co",
-        "email_with_domain": "sebastianroldan0818@correo.itm.edu.co",
-        "faculty_location": "Parque I - Simulación, modelamiento y prototipos"
-    },
-    {
-        "fullname": "SERNA GUARIN LEONARDO",
-        "identification_card": 98583374,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA EN TELECOMUNICACIONES",
-        "highest_education_level": "Maestría",
-        "degree_obtained": "Maestría en Automatización y Control Industrial",
-        "undergraduate_degree": "Ingeniero de Sistemas",
-        "partnership": "OCASIONAL",
-        "institutional_email": "leonardoserna@itm.edu.co",
-        "personal_email": "leonardoserna@itm.edu.co",
-        "email_with_domain": "leonardoserna3374@correo.itm.edu.co",
-        "faculty_location": "Bloque M sótano 1"
-    },
-    {
-        "fullname": "SOTO PERDOMO JUAN SEBASTIÁN",
-        "identification_card": 1079412389,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "TECNOLOGÍA EN GESTIÓN DE REDES DE TELECOMUNICACIONES",
-        "highest_education_level": "Maestría",
-        "degree_obtained": "Maestría en Automatización y Control Industrial",
-        "undergraduate_degree": "Físico",
-        "partnership": "OCASIONAL",
-        "institutional_email": "juansotop@itm.edu.co",
-        "personal_email": "juansoto319998@correo.itm.edu.co",
-        "email_with_domain": "juansoto319998@correo.itm.edu.co",
-        "faculty_location": "Bloque M-212 (Sede Fraternidad)"
-    },
-    {
-        "fullname": "SUAREZ ALVAREZ FABIO LEON",
-        "identification_card": 71582563,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA EN TELECOMUNICACIONES",
-        "highest_education_level": "Maestría",
-        "degree_obtained": "Magíster en Gestión Energética",
-        "undergraduate_degree": "Ingeniero Electrónico",
-        "partnership": "OCASIONAL",
-        "institutional_email": "fabiosuarez@itm.edu.co",
-        "personal_email": "fabiosuarez@itm.edu.co",
-        "email_with_domain": "fabiosuarez2563@correo.itm.edu.co",
-        "faculty_location": "Bloque L- 304 (Sede Fraternidad)"
-    },
-    {
-        "fullname": "TOBÓN MEJÍA ANDRÉS FELIPE",
-        "identification_card": 71778382,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA EN TELECOMUNICACIONES",
-        "highest_education_level": "Maestría",
-        "degree_obtained": "Maestría en Automatización y Control Industrial",
-        "undergraduate_degree": "Ingeniero en Instrumentación y Control",
-        "partnership": "OCASIONAL",
-        "institutional_email": "andrestobon@itm.edu.co",
-        "personal_email": "andrestobon@itm.edu.co",
-        "email_with_domain": "andrestobon8382@correo.itm.edu.co",
-        "faculty_location": "Parque I, Fraternidad, Lab. Electrónica y energías renovables"
-    },
-    {
-        "fullname": "VALLEJO VALENCIA MARCELA",
-        "identification_card": 32182736,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "TECNOLOGÍA EN AUTOMATIZACIÓN ELECTRÓNICA",
-        "highest_education_level": "Maestría",
-        "degree_obtained": "Magíster en Ingeniería",
-        "undergraduate_degree": "Ingeniero Electrónico",
-        "partnership": "OCASIONAL",
-        "institutional_email": "marcelavallejo@itm.edu.co",
-        "personal_email": "mvallejov@gmail.com",
-        "email_with_domain": "marcelavallejo2736@correo.itm.edu.co",
-        "faculty_location": "Fraternidad (Bloque M sótano 1), Robledo (F-201, Laboratorio Amysod)"
-    },
-    {
-        "fullname": "VILLEGAS CEBALLOS JUAN PABLO",
-        "identification_card": 1017192320,
-        "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
-        "program": "INGENIERÍA ELECTRÓNICA",
-        "highest_education_level": "Maestría",
-        "degree_obtained": "Ingeniero Electrónico",
-        "undergraduate_degree": "Ingeniero Electrónico",
-        "partnership": "OCASIONAL",
-        "institutional_email": "juanvillegas@itm.edu.co",
-        "personal_email": "juanvillegas@itm.edu.co",
-        "email_with_domain": "juanvillegas2320@correo.itm.edu.co",
-        "faculty_location": "Parque I - Laboratorio de electrónica y energías renovables."
-    }
+            "fullname": "GUARNIZO LEMUS CRISTIAN",
+            "identification_card": 10034133,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA ELECTRÓNICA",
+            "highest_education_level": "Doctorado",
+            "degree_obtained": "Doctor en Ingeniería",
+            "undergraduate_degree": "Ingeniero Electrónico",
+            "partnership": "OCASIONAL",
+            "institutional_email": "cristianguarnizo@itm.edu.co",
+            "personal_email": "cdguarnizo@hotmail.com",
+            "email_with_domain": "cristianguarnizo4133@correo.itm.edu.co",
+            "faculty_location": "Parque I - Laboratorio de Sistemas de Control y Robótica",
+            "role": "professor"
+        },
+        {
+            "fullname": "MARQUEZ VILORIA DAVID ANDRES",
+            "identification_card": 16079570,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA EN TELECOMUNICACIONES",
+            "highest_education_level": "Maestría",
+            "degree_obtained": "Magíster en Ingeniería Eléctrica",
+            "undergraduate_degree": "Ingeniero Electrónico",
+            "partnership": "OCASIONAL",
+            "institutional_email": "davidmarquez@itm.edu.co",
+            "personal_email": "davidmarquez@itm.edu.co",
+            "email_with_domain": "davidmarquez9570@correo.itm.edu.co",
+            "faculty_location": "Laboratorio de sistemas de control y robótica, Parque-I",
+            "role": "professor"
+        },
+        {
+            "fullname": "MEJÍA ARANGO JUAN GUILLERMO",
+            "identification_card": 98514998,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA ELECTRÓNICA",
+            "highest_education_level": "Doctorado",
+            "degree_obtained": "Doctorado en Ciencias de la Educación",
+            "undergraduate_degree": "Ingeniero Electricista",
+            "partnership": "OCASIONAL",
+            "institutional_email": "juanmejia@itm.edu.co",
+            "personal_email": "juanmejiaar@gmail.com",
+            "email_with_domain": "juanmejia4998@correo.itm.edu.co",
+            "faculty_location": "Bloque L- 304 (Sede Fraternidad)",
+            "role": "professor"
+        },
+        {
+            "fullname": "MONTES GRANADA WILLER FERNEY",
+            "identification_card": 15336658,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA EN TELECOMUNICACIONES",
+            "highest_education_level": "Maestría",
+            "degree_obtained": "Maestría en Electrónica",
+            "undergraduate_degree": "Ingeniero Electrónico",
+            "partnership": "OCASIONAL",
+            "institutional_email": "willermontes@itm.edu.co",
+            "personal_email": "wfmontes@gmail.com",
+            "email_with_domain": "willermontes6658@correo.itm.edu.co",
+            "faculty_location": "Bloque M sótano 1",
+            "role": "professor"
+        },
+        {
+            "fullname": "MONTOYA BENITEZ ALBER OSWALDO",
+            "identification_card": 98606628,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA EN TELECOMUNICACIONES",
+            "highest_education_level": "Maestría",
+            "degree_obtained": "Magíster en Ingeniería de Telecomunicaciones",
+            "undergraduate_degree": "Ingeniería de Control",
+            "partnership": "OCASIONAL",
+            "institutional_email": "albermontoya@itm.edu.co",
+            "personal_email": "albertmontoya912@gmail.com",
+            "email_with_domain": "albermontoya6628@correo.itm.edu.co",
+            "faculty_location": "Bloque M-212 (Sede Fraternidad)",
+            "role": "professor"
+        },
+        {
+            "fullname": "NIETO MORA DANIEL ALEXIS",
+            "identification_card": 1017222725,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA ELECTRÓNICA",
+            "highest_education_level": "Maestría",
+            "degree_obtained": "Magister en Automatización y Control Industrial",
+            "undergraduate_degree": "Ingeniería Mecatrónica",
+            "partnership": "OCASIONAL",
+            "institutional_email": "danielnieto@itm.edu.co",
+            "personal_email": "alexis.0894@hotmail.com",
+            "email_with_domain": "danielnieto2725@correo.itm.edu.co",
+            "faculty_location": "Laboratorio de Máquinas Inteligentes y Reconocimiento de Patrones MIRP - Parque I",
+            "role": "professor"
+        },
+        {
+            "fullname": "OSPINA CIFUENTES BAYRON JESIT",
+            "identification_card": 98505501,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA EN TELECOMUNICACIONES",
+            "highest_education_level": "Maestría",
+            "degree_obtained": "Magíster en Ingeniería de Telecomunicaciones",
+            "undergraduate_degree": "Ingeniero de Sistemas",
+            "partnership": "OCASIONAL",
+            "institutional_email": "bayronospina@itm.edu.co",
+            "personal_email": "bayronospina@itm.edu.co",
+            "email_with_domain": "bayronospina5501@correo.itm.edu.co",
+            "faculty_location": "Bloque M-212 (Sede Fraternidad)",
+            "role": "professor"
+        },
+        {
+            "fullname": "OSSA MOLINA OSCAR DAVID",
+            "identification_card": 1152195365,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA EN TELECOMUNICACIONES",
+            "highest_education_level": "Maestría",
+            "degree_obtained": "Maestría en Automatización y Control Industrial",
+            "undergraduate_degree": "Ingeniero de Telecomunicaciones",
+            "partnership": "OCASIONAL",
+            "institutional_email": "oscarossa@itm.edu.co",
+            "personal_email": "oscarossa5365@correo.itm.edu.co",
+            "email_with_domain": "oscarossa5365@correo.itm.edu.co",
+            "faculty_location": "Bloque M-212 (Sede Fraternidad)",
+            "role": "professor"
+        },
+        {
+            "fullname": "RESTREPO CUESTAS BONIE JOHANA",
+            "identification_card": 24694065,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA ELECTRÓNICA",
+            "highest_education_level": "Doctorado",
+            "degree_obtained": "Doctora en Ingeniería Automática",
+            "undergraduate_degree": "Ingeniero Electrónico",
+            "partnership": "OCASIONAL",
+            "institutional_email": "bonierestrepo@itm.edu.co",
+            "personal_email": "bonierestrepo@itm.edu.co",
+            "email_with_domain": "bonierestrepo4065@correo.itm.edu.co",
+            "faculty_location": "Laboratorio de Simulación, Modelamiento y Prototipado ubicado en Parque I",
+            "role": "professor"
+        },
+        {
+            "fullname": "REYES VERA ERICK ESTEFEN",
+            "identification_card": 1017125415,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA EN TELECOMUNICACIONES",
+            "highest_education_level": "Doctorado",
+            "degree_obtained": "Doctor en Ingeniería",
+            "undergraduate_degree": "Ingeniero Físico",
+            "partnership": "OCASIONAL",
+            "institutional_email": "erickreyes@itm.edu.co",
+            "personal_email": "erickreyes@itm.edu.co",
+            "email_with_domain": "erickreyes5415@correo.itm.edu.co",
+            "faculty_location": "Bloque M-212 (Sede Fraternidad)",
+            "role": "professor"
+        },
+        {
+            "fullname": "ROJAS MONTANO JHON JAIRO",
+            "identification_card": 1116917420,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "TECNOLOGÍA EN AUTOMATIZACIÓN ELECTRÓNICA",
+            "highest_education_level": "Maestría",
+            "degree_obtained": "Maestría en Automatización y Control Industrial",
+            "undergraduate_degree": "Ingeniero Electrónico",
+            "partnership": "OCASIONAL",
+            "institutional_email": "jhonrojas@itm.edu.co",
+            "personal_email": "jhonrojas@itm.edu.co",
+            "email_with_domain": "jhonrojas7420@correo.itm.edu.co",
+            "faculty_location": "",
+            "role": "professor"
+        },
+        {
+            "fullname": "ROLDAN VASCO SEBASTIAN",
+            "identification_card": 1037570818,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA ELECTRÓNICA",
+            "highest_education_level": "Doctorado",
+            "degree_obtained": "Doctor en Ingeniería Electrónica y de Computación",
+            "undergraduate_degree": "Bioingeniería",
+            "partnership": "OCASIONAL",
+            "institutional_email": "sebastianroldan@itm.edu.co",
+            "personal_email": "sebastianroldan@itm.edu.co",
+            "email_with_domain": "sebastianroldan0818@correo.itm.edu.co",
+            "faculty_location": "Parque I - Simulación, modelamiento y prototipos",
+            "role": "professor"
+        },
+        {
+            "fullname": "SERNA GUARIN LEONARDO",
+            "identification_card": 98583374,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA EN TELECOMUNICACIONES",
+            "highest_education_level": "Maestría",
+            "degree_obtained": "Maestría en Automatización y Control Industrial",
+            "undergraduate_degree": "Ingeniero de Sistemas",
+            "partnership": "OCASIONAL",
+            "institutional_email": "leonardoserna@itm.edu.co",
+            "personal_email": "leonardoserna@itm.edu.co",
+            "email_with_domain": "leonardoserna3374@correo.itm.edu.co",
+            "faculty_location": "Bloque M sótano 1",
+            "role": "professor"
+        },
+        {
+            "fullname": "SOTO PERDOMO JUAN SEBASTIÁN",
+            "identification_card": 1079412389,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "TECNOLOGÍA EN GESTIÓN DE REDES DE TELECOMUNICACIONES",
+            "highest_education_level": "Maestría",
+            "degree_obtained": "Maestría en Automatización y Control Industrial",
+            "undergraduate_degree": "Físico",
+            "partnership": "OCASIONAL",
+            "institutional_email": "juansotop@itm.edu.co",
+            "personal_email": "juansoto319998@correo.itm.edu.co",
+            "email_with_domain": "juansoto319998@correo.itm.edu.co",
+            "faculty_location": "Bloque M-212 (Sede Fraternidad)",
+            "role": "professor"
+        },
+        {
+            "fullname": "SUAREZ ALVAREZ FABIO LEON",
+            "identification_card": 71582563,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA EN TELECOMUNICACIONES",
+            "highest_education_level": "Maestría",
+            "degree_obtained": "Magíster en Gestión Energética",
+            "undergraduate_degree": "Ingeniero Electrónico",
+            "partnership": "OCASIONAL",
+            "institutional_email": "fabiosuarez@itm.edu.co",
+            "personal_email": "fabiosuarez@itm.edu.co",
+            "email_with_domain": "fabiosuarez2563@correo.itm.edu.co",
+            "faculty_location": "Bloque L- 304 (Sede Fraternidad)",
+            "role": "professor"
+        },
+        {
+            "fullname": "TOBÓN MEJÍA ANDRÉS FELIPE",
+            "identification_card": 71778382,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA EN TELECOMUNICACIONES",
+            "highest_education_level": "Maestría",
+            "degree_obtained": "Maestría en Automatización y Control Industrial",
+            "undergraduate_degree": "Ingeniero en Instrumentación y Control",
+            "partnership": "OCASIONAL",
+            "institutional_email": "andrestobon@itm.edu.co",
+            "personal_email": "andrestobon@itm.edu.co",
+            "email_with_domain": "andrestobon8382@correo.itm.edu.co",
+            "faculty_location": "Parque I, Fraternidad, Lab. Electrónica y energías renovables",
+            "role": "professor"
+        },
+        {
+            "fullname": "VALLEJO VALENCIA MARCELA",
+            "identification_card": 32182736,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "TECNOLOGÍA EN AUTOMATIZACIÓN ELECTRÓNICA",
+            "highest_education_level": "Maestría",
+            "degree_obtained": "Magíster en Ingeniería",
+            "undergraduate_degree": "Ingeniero Electrónico",
+            "partnership": "OCASIONAL",
+            "institutional_email": "marcelavallejo@itm.edu.co",
+            "personal_email": "mvallejov@gmail.com",
+            "email_with_domain": "marcelavallejo2736@correo.itm.edu.co",
+            "faculty_location": "Fraternidad (Bloque M sótano 1), Robledo (F-201, Laboratorio Amysod)",
+            "role": "professor"
+        },
+        {
+            "fullname": "VILLEGAS CEBALLOS JUAN PABLO",
+            "identification_card": 1017192320,
+            "department": "ELECTRÓNICA Y TELECOMUNICACIONES",
+            "program": "INGENIERÍA ELECTRÓNICA",
+            "highest_education_level": "Maestría",
+            "degree_obtained": "Ingeniero Electrónico",
+            "undergraduate_degree": "Ingeniero Electrónico",
+            "partnership": "OCASIONAL",
+            "institutional_email": "juanvillegas@itm.edu.co",
+            "personal_email": "juanvillegas@itm.edu.co",
+            "email_with_domain": "juanvillegas2320@correo.itm.edu.co",
+            "faculty_location": "Parque I - Laboratorio de electrónica y energías renovables.",
+            "role": "professor"
+        }
     ]
 
     def handle(self):

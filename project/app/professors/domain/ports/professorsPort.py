@@ -8,6 +8,12 @@ class professorPort:
         identification_card: int
     ):
         raise NotImplementedError
+    
+    def get_professor_by_id(
+        self,
+        professor_id: int
+    ):
+        raise NotImplementedError
 
     def create_professor(self, **kwargs):
         raise NotImplementedError

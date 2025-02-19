@@ -13,3 +13,4 @@ class CreateprofessorSchema(Schema):
     personal_email = fields.String(required=True)
     email_with_domain = fields.String(required=True)
     faculty_location = fields.String(required=True)
+    role = fields.String(required=True)

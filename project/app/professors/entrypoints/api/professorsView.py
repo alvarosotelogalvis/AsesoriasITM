@@ -27,9 +27,11 @@ from project.shared.domain.utils.apiParamsValidation import (
     validate_request
 )
 
+from flask_jwt_extended import jwt_required, get_jwt_identity
 from flask_restx import Namespace, Resource
 from http import HTTPStatus
 from injector import inject
+import json
 
 api = Namespace(
     name="professor",
@@ -50,10 +52,15 @@ class CreateprofessorView(Resource):
         schema=CreateprofessorSchema,
         with_types=[ValidationRequestType.BODY_PARAMS]
     )
+    @jwt_required(locations="query_string")
     def post(self, request):
         try:
+            current_user = json.loads(get_jwt_identity())
             service = get_instance(CreateprofessorService)
-            output = service.execute(**request)
+            output = service.execute(
+                role_name=current_user.get("role"),
+                **request
+            )
             return APIResponseService.success(
                 output=output,
                 status_code=HTTPStatus.CREATED,
@@ -77,10 +84,15 @@ class UpdateprofessorView(Resource):
         schema=UpdateprofessorSchema,
         with_types=[ValidationRequestType.BODY_PARAMS]
     )
+    @jwt_required(locations="query_string")
     def patch(self, request):
         try:
+            current_user = json.loads(get_jwt_identity())
             service = get_instance(UpdateprofessorService)
-            output = service.execute(**request)
+            output = service.execute(
+                role_name=current_user.get("role"),
+                **request
+            )
             return APIResponseService.success(
                 output=output,
                 status_code=HTTPStatus.CREATED,
@@ -105,10 +117,13 @@ class DeleteprofessorView(Resource):
         schema=DeleteprofessorSchema,
         with_types=[ValidationRequestType.BODY_PARAMS]
     )
+    @jwt_required(locations="query_string")
     def delete(self, request):
         try:
+            current_user = json.loads(get_jwt_identity())
             service = get_instance(DeleteprofessorService)
             output = service.execute(
+                role_name=current_user.get("role"),
                 identification_card=request.get("identification_card")
             )
             return APIResponseService.success(

@@ -48,6 +48,25 @@ class professorAdapter:
             raise Exception(error)
         finally:
             self.session.close()
+    
+    def get_professor_by_id(
+        self,
+        professor_id: int
+    ):
+        try:
+            professor = self.session.query(
+                professorModel
+            ).filter(
+                professorModel.id == professor_id,
+                professorModel.deleted_at.is_(None)
+            ).first()
+            return professor
+        except FlushError as error:
+            raise Exception(error)
+        except Exception as error:
+            raise Exception(error)
+        finally:
+            self.session.close()
 
     def create_professor(self, **kwargs):
         try:
@@ -64,6 +83,7 @@ class professorAdapter:
                 personal_email=kwargs.get("personal_email"),
                 email_with_domain=kwargs.get("email_with_domain"),
                 faculty_location=kwargs.get("faculty_location"),
+                role=kwargs.get("role"),
             )
             self.session.add(professor)
             return professor
