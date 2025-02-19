@@ -4,11 +4,17 @@ from project.app.schedules.domain.services.createScheduleService import (
 from project.app.schedules.domain.services.getAllScheduleService import (
     GetAllScheduleService
 )
+from project.app.schedules.domain.services.updateScheduleService import (
+    UpdateScheduleService
+)
 from project.app.schedules.entrypoints.requests.createScheduleInput import (
     CreateScheduleSchema
 )
 from project.app.schedules.entrypoints.requests.getAllScheduleInput import (
     GetAllScheduleSchema
+)
+from project.app.schedules.entrypoints.requests.updateScheduleInput import (
+    UpdateScheduleSchema
 )
 from project.shared.domain.services.apiResponseService import (
     APIResponseService
@@ -89,6 +95,39 @@ class CreateScheduleView(Resource):
                 output=output,
                 status_code=HTTPStatus.CREATED,
                 message="CREATED"
+            )
+        except Exception as error:
+            return APIResponseService.error(
+                message=str(error)
+            )
+
+@api.route("/update_schedule")
+class UpdateScheduleView(Resource):
+    
+    @inject
+    def __init__(self, api=None, *args, **kwargs):
+        super(UpdateScheduleView, self).__init__(api, *args, **kwargs)
+        self.get_instance = get_instance
+        # self.log = logging.getLogger('application.api')
+
+    @validate_request(
+        schema=UpdateScheduleSchema,
+        with_types=[ValidationRequestType.BODY_PARAMS]
+    )
+    @jwt_required(locations="query_string")
+    def patch(self, request):
+        try:
+            current_user = json.loads(get_jwt_identity())
+            service = get_instance(UpdateScheduleService)
+            output = service.execute(
+                role_name=current_user.get("role"),
+                professor_id=current_user.get("id"),
+                **request
+            )
+            return APIResponseService.success(
+                output=output,
+                status_code=HTTPStatus.CREATED,
+                message="UPDATED"
             )
         except Exception as error:
             return APIResponseService.error(

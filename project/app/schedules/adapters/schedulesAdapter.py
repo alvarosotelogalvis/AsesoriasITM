@@ -6,8 +6,9 @@ from project.app.professors.domain.models.professorsModel import (
 )
 from project.shared.config.database import SessionFactory
 
-from sqlalchemy.orm.exc import FlushError
 from injector import inject
+from sqlalchemy import update
+from sqlalchemy.orm.exc import FlushError
 
 
 class ScheduleAdapter:
@@ -37,16 +38,14 @@ class ScheduleAdapter:
         finally:
             self.session.close()
 
-    def get_schedules_by_group(self, group_id: int, professor_id: int):
+    def get_schedule(self, **kwargs):
         try:
-            schedule = self.session.query(
-                ScheduleModel
-            ).filter(
-                ScheduleModel.group_id == group_id,
-                ScheduleModel.professor_id == professor_id,
-                ScheduleModel.deleted_at.is_(None)
-            ).first()
-            return schedule
+            schedule_querry = self.session.query(ScheduleModel)
+            for key, value in kwargs.items():
+                schedule_querry = schedule_querry.filter(
+                    getattr(ScheduleModel, key) == value
+                )
+            return schedule_querry.first()
         except FlushError as error:
             raise Exception(error)
         except Exception as error:
@@ -65,6 +64,24 @@ class ScheduleAdapter:
                 professor_id=kwargs.get("professor_id")
             )
             self.session.add(schedule)
+            return schedule
+        except FlushError as error:
+            raise Exception(error)
+        except Exception as error:
+            raise Exception(error)
+        finally:
+            self.session.commit()
+            self.session.close()
+
+    def update_schedule(self, group_id: str, **kwargs):
+        try:
+            schedule = update(
+                ScheduleModel
+            ).where(
+                ScheduleModel.group_id == group_id
+            ).values(**kwargs)
+            self.session.execute(schedule)
+            self.session.commit()
             return schedule
         except FlushError as error:
             raise Exception(error)
