@@ -11,8 +11,6 @@ services:
       - MYSQL_DATABASE=consulting_schedule_db
     volumes:
       - ../data:/var/lib/mysql
-    networks:
-      - simplifica
   backend:
     restart: always
     build: 
@@ -28,8 +26,3 @@ services:
       - database
     env_file:
       - .env
-    networks:
-      - simplifica
-networks:
-  simplifica:
-    external: true
