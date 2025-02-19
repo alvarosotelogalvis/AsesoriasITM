@@ -56,6 +56,6 @@ class CreateScheduleService:
                     "deleted_at": None
                 }
             )
-            if not get_schedule:
+            if get_schedule:
                 raise Exception(
                     f"The subject with code '{group_id}' is create.")

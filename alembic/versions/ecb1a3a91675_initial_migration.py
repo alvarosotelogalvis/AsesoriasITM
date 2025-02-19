@@ -1,8 +1,8 @@
 """Initial migration
 
-Revision ID: 11404e8ec164
+Revision ID: ecb1a3a91675
 Revises: 
-Create Date: 2025-02-18 17:46:24.280908
+Create Date: 2025-02-19 16:47:09.817178
 
 """
 from typing import Sequence, Union
@@ -12,7 +12,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = '11404e8ec164'
+revision: str = 'ecb1a3a91675'
 down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None
@@ -34,16 +34,14 @@ def upgrade() -> None:
     sa.Column('personal_email', sa.String(length=100), nullable=False),
     sa.Column('email_with_domain', sa.String(length=100), nullable=False),
     sa.Column('faculty_location', sa.String(length=150), nullable=True),
+    sa.Column('role', sa.String(length=15), nullable=False),
     sa.Column('created_at', sa.TIMESTAMP(), nullable=True),
     sa.Column('updated_at', sa.TIMESTAMP(), nullable=True, onupdate=sa.func.now()),
     sa.Column('deleted_at', sa.TIMESTAMP(), nullable=True),
-    sa.PrimaryKeyConstraint('id'),
-    sa.UniqueConstraint('email_with_domain'),
-    sa.UniqueConstraint('institutional_email'),
-    sa.UniqueConstraint('personal_email')
+    sa.PrimaryKeyConstraint('id')
     )
     op.create_index(op.f('ix_professors_id'), 'professors', ['id'], unique=False)
-    op.create_index(op.f('ix_professors_identification_card'), 'professors', ['identification_card'], unique=True)
+    op.create_index(op.f('ix_professors_identification_card'), 'professors', ['identification_card'], unique=False)
     op.create_table('logged-in_users',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('username', sa.String(length=80), nullable=False),
@@ -71,7 +69,7 @@ def upgrade() -> None:
     sa.ForeignKeyConstraint(['professor_id'], ['professors.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
-    op.create_index(op.f('ix_schedules_group_id'), 'schedules', ['group_id'], unique=True)
+    op.create_index(op.f('ix_schedules_group_id'), 'schedules', ['group_id'], unique=False)
     op.create_index(op.f('ix_schedules_id'), 'schedules', ['id'], unique=False)
     # ### end Alembic commands ###
 

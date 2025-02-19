@@ -20,7 +20,8 @@ class professorAdapter:
                 professorModel
             ).filter(
                 professorModel.institutional_email == kwargs.get("institutional_email"),
-                professorModel.identification_card == kwargs.get("identification_card")
+                professorModel.identification_card == kwargs.get("identification_card"),
+                professorModel.deleted_at.is_(None)
             ).first()
             return professor
         except FlushError as error:

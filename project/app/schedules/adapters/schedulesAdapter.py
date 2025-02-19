@@ -29,8 +29,10 @@ class ScheduleAdapter:
                 ScheduleModel.classroom,
             ).join(
                 professorModel
+            ).filter(
+                professorModel.deleted_at.is_(None),
+                ScheduleModel.deleted_at.is_(None)
             )
-            # schedules = self.session.execute(query).mappings().all()
             return query
         except FlushError as error:
             raise Exception(error)

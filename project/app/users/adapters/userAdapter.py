@@ -1,8 +1,9 @@
 from project.app.users.domain.models.userModel import UserModel
 from project.shared.config.database import SessionFactory
 
-from sqlalchemy.orm.exc import FlushError
+from datetime import datetime
 from injector import inject
+from sqlalchemy.orm.exc import FlushError
 
 class UserAdapter:
 
@@ -15,7 +16,8 @@ class UserAdapter:
             get_login = self.session.query(
                 UserModel
             ).filter(
-                UserModel.username == username
+                UserModel.username == username,
+                UserModel.deleted_at.is_(None)
             ).first()
             return get_login
         except FlushError as error:
@@ -39,6 +41,24 @@ class UserAdapter:
             raise Exception(error)
         except Exception as error:
             self.session.rollback()
+            raise Exception(error)
+        finally:
+            self.session.commit()
+            self.session.close()
+
+    def delete_user(self, professor_id: str):
+        try:
+            professor = self.session.query(
+                UserModel
+            ).filter(
+                UserModel.professor_id == professor_id
+            ).update(
+                {UserModel.deleted_at: datetime.now()}
+            )
+            return professor
+        except FlushError as error:
+            raise Exception(error)
+        except Exception as error:
             raise Exception(error)
         finally:
             self.session.commit()
