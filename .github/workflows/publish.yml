@@ -38,11 +38,7 @@ jobs:
     - name: Run Alembic migrations
       run: |
         docker-compose exec backend alembic upgrade head
-    
-    - name: Check container logs
-      if: ${{ failure() }}
-      run: docker-compose logs
 
     - name: Run Seeders
       run: |
-        flask dbseed
+        docker-compose exec backend flask dbseed
