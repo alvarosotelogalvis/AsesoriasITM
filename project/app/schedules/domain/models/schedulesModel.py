@@ -8,7 +8,7 @@ class ScheduleModel(Base):
     __tablename__ = "schedules"
 
     id = Column(Integer, primary_key=True, index=True)
-    group_id = Column(String(15), unique=True, nullable=False, index=True)
+    group_id = Column(String(15), nullable=False, index=True)
     subject = Column(String(80), nullable=False)
     schedule = Column(String(150), nullable=False)
     classroom = Column(String(150), nullable=False)
