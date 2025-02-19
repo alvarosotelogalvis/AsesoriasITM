@@ -6,6 +6,7 @@ from project.app.professors.domain.models.professorsModel import (
 )
 from project.shared.config.database import SessionFactory
 
+from datetime import datetime
 from injector import inject
 from sqlalchemy import update
 from sqlalchemy.orm.exc import FlushError
@@ -90,3 +91,22 @@ class ScheduleAdapter:
         finally:
             self.session.commit()
             self.session.close()
+    
+    def delete_schedule(self, group_id: str):
+        try:
+            professor = self.session.query(
+                ScheduleModel
+            ).filter(
+                ScheduleModel.group_id == group_id
+            ).update(
+                {ScheduleModel.deleted_at: datetime.now()}
+            )
+            return professor
+        except FlushError as error:
+            raise Exception(error)
+        except Exception as error:
+            raise Exception(error)
+        finally:
+            self.session.commit()
+            self.session.close()
+

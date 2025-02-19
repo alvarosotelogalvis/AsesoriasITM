@@ -1,6 +1,9 @@
 from project.app.schedules.domain.services.createScheduleService import (
     CreateScheduleService
 )
+from project.app.schedules.domain.services.deleteScheduleService import (
+    DeleteScheduleService
+)
 from project.app.schedules.domain.services.getAllScheduleService import (
     GetAllScheduleService
 )
@@ -9,6 +12,9 @@ from project.app.schedules.domain.services.updateScheduleService import (
 )
 from project.app.schedules.entrypoints.requests.createScheduleInput import (
     CreateScheduleSchema
+)
+from project.app.schedules.entrypoints.requests.deleteSchemaInput import (
+    DeleteScheduleSchema
 )
 from project.app.schedules.entrypoints.requests.getAllScheduleInput import (
     GetAllScheduleSchema
@@ -128,6 +134,40 @@ class UpdateScheduleView(Resource):
                 output=output,
                 status_code=HTTPStatus.CREATED,
                 message="UPDATED"
+            )
+        except Exception as error:
+            return APIResponseService.error(
+                message=str(error)
+            )
+
+
+@api.route("/delete_schedule")
+class DeleteScheduleView(Resource):
+    
+    @inject
+    def __init__(self, api=None, *args, **kwargs):
+        super(DeleteScheduleView, self).__init__(api, *args, **kwargs)
+        self.get_instance = get_instance
+        # self.log = logging.getLogger('application.api')
+
+    @validate_request(
+        schema=DeleteScheduleSchema,
+        with_types=[ValidationRequestType.BODY_PARAMS]
+    )
+    @jwt_required(locations="query_string")
+    def delete(self, request):
+        try:
+            current_user = json.loads(get_jwt_identity())
+            service = get_instance(DeleteScheduleService)
+            output = service.execute(
+                role_name=current_user.get("role"),
+                professor_id=current_user.get("id"),
+                group_id=request.get("group_id")
+            )
+            return APIResponseService.success(
+                output=output,
+                status_code=HTTPStatus.CREATED,
+                message="DELETED"
             )
         except Exception as error:
             return APIResponseService.error(

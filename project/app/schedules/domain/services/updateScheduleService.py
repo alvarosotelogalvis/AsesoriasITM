@@ -37,7 +37,8 @@ class UpdateScheduleService:
             get_schedule = self.schedule_port.get_schedule(
                 **{
                     "group_id": group_id,
-                    "professor_id": professor_id
+                    "professor_id": professor_id,
+                    "deleted_at": None
                 }
             )
             if not get_schedule:
@@ -46,7 +47,8 @@ class UpdateScheduleService:
         elif role_name == "admin":
             get_schedule = self.schedule_port.get_schedule(
                 **{
-                    "group_id": group_id
+                    "group_id": group_id,
+                    "deleted_at": None
                 }
             )
             if not get_schedule:

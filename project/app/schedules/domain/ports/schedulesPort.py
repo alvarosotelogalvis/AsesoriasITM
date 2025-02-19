@@ -11,3 +11,6 @@ class SchedulePort:
     
     def update_schedule(self, group_id: str, **kwargs):
         raise NotImplementedError
+    
+    def delete_schedule(self, group_id: str):
+        raise NotImplementedError

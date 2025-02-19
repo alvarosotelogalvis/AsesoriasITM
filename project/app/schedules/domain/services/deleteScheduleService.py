@@ -5,7 +5,7 @@ from project.app.schedules.domain.ports.schedulesPort import (
     SchedulePort
 )
 
-class CreateScheduleService:
+class DeleteScheduleService:
 
     def __init__(
         self,
@@ -13,24 +13,19 @@ class CreateScheduleService:
     ):
         self.schedule_port = schedule_port
 
-    def execute(self, role_name: str, professor_id: int, **kwargs):
+    def execute(self, role_name: str, professor_id: int, group_id: str):
         # Validations
         self.__validate_role(role_name=role_name)
         self.__validate_group(
             role_name=role_name,
-            group_id=kwargs.get("group_id"),
+            group_id=group_id,
             professor_id=professor_id
         )
-        # Create schedule
-        kwargs.update({"professor_id": professor_id})
-        create_schedule = self.schedule_port.create_schedule(**kwargs)
-        if not create_schedule:
-            raise Exception("The schedule could not be created")
-        return {
-            "id": create_schedule.id,
-            "group_id": create_schedule.group_id,
-            "subject": create_schedule.subject,
-        }
+        # Delete schedule
+        self.schedule_port.delete_schedule(
+            group_id=group_id
+        )
+        return {"successful": "The schedule was deleted correctly"}
 
     def __validate_role(self, role_name: str):
         if role_name not in permitted_roles_for_schedules:
@@ -46,9 +41,9 @@ class CreateScheduleService:
                     "deleted_at": None
                 }
             )
-            if get_schedule:
+            if not get_schedule:
                 raise Exception(
-                    f"The subject with code '{group_id}' is already assigned to this user.")
+                    f"the subject does not exist or does not belong to the user.")
         elif role_name == "admin":
             get_schedule = self.schedule_port.get_schedule(
                 **{
@@ -58,4 +53,4 @@ class CreateScheduleService:
             )
             if not get_schedule:
                 raise Exception(
-                    f"The subject with code '{group_id}' is create.")
+                    f"the subject does not exist.")
