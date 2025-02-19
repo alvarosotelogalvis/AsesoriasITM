@@ -6,6 +6,9 @@ on:
   pull_request:
     branches: ["master"]
 
+env:
+  HEALTHCHECK_URL: http://consulting_schedule:5000
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
