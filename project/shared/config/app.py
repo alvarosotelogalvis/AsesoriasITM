@@ -4,6 +4,7 @@ from project.shared.config.jwt import config_jwt
 from project.shared.domain.seeders import seeders
 
 from flask import Flask, jsonify
+from flask_cors import CORS
 
 # Init app
 app = Flask(__name__)
@@ -19,6 +20,14 @@ app.cli.add_command(seeders.run_seeders)
 
 # Create tables from models
 get_tables()
+
+# Configure CORS
+CORS(
+    app=app,
+    origins="*",
+    methods=["GET", "POST", "PUT", "DELETE"],
+    allow_headers=["Content-Type", "Authorization"]
+)
 
 # Endpoint to check API health.
 @app.route('/health', methods=['GET'])
