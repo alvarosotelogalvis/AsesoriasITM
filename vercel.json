@@ -15,6 +15,6 @@
     "env": {
         "FLASK_APP": "project/shared/config/app.py",
         "FLASK_ENV": "production",
-        "DATABASE_URL": "mysql+pymysql://root:password@database:3306/consulting_schedule_db"
+        "DATABASE_URL": "mysql+pymysql://root:password@localost:3306/consulting_schedule_db"
     }
 }
