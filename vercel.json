@@ -1,0 +1,20 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "project/shared/config/app.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "project/shared/config/app.py"
+        }
+    ],
+    "env": {
+        "FLASK_APP": "app.py",
+        "FLASK_ENV": "production",
+        "DATABASE_URL": "mysql+pymysql://root:password@database:3306/consulting_schedule_db"
+    }
+}

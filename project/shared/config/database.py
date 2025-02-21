@@ -1,7 +1,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import declarative_base, sessionmaker, scoped_session
-
+from dotenv import load_dotenv
 import os
+
+load_dotenv()
 
 
 SQL_ALCHEMY_DATABASE_URL = "mysql+pymysql://{}:{}@{}:{}/{}".format(
