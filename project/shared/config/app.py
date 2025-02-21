@@ -25,7 +25,7 @@ get_tables()
 CORS(
     app=app,
     origins="*",
-    methods=["GET", "POST", "PUT", "DELETE"],
+    methods=["GET", "POST", "PATCH", "DELETE"],
     allow_headers=["Content-Type", "Authorization"]
 )
 
